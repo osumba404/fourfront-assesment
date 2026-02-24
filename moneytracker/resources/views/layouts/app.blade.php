@@ -16,12 +16,12 @@
     <nav class="border-b border-slate-200 bg-white shadow-sm">
         <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div class="flex h-14 items-center justify-between">
-                <a href="{{ route('dashboard') }}" class="text-lg font-semibold text-slate-800 hover:text-indigo-600">
+                <a href="{{ route('dashboard') }}" class="text-lg font-semibold text-slate-800 hover:text-green-600">
                     Money Tracker
                 </a>
                 <div class="flex items-center gap-4">
-                    <a href="{{ route('users.create') }}" class="text-sm font-medium text-slate-600 hover:text-indigo-600">New user</a>
-                    <a href="{{ route('wallets.create') }}" class="text-sm font-medium text-slate-600 hover:text-indigo-600">New wallet</a>
+                    <a href="{{ route('users.create') }}" class="text-sm font-medium text-slate-600 hover:text-green-600">New user</a>
+                    <a href="{{ route('wallets.create') }}" class="text-sm font-medium text-slate-600 hover:text-green-600">New wallet</a>
                 </div>
             </div>
         </div>

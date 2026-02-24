@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="mb-6">
-        <a href="{{ route('users.show', $wallet->user) }}" class="text-sm font-medium text-slate-600 hover:text-indigo-600">&larr; {{ $wallet->user->name }} profile</a>
+        <a href="{{ route('users.show', $wallet->user) }}" class="text-sm font-medium text-slate-600 hover:text-green-600">&larr; {{ $wallet->user->name }} profile</a>
     </div>
 
     <div class="space-y-6">
@@ -27,7 +27,7 @@
                 <div>
                     <label for="type" class="block text-sm font-medium text-slate-700">Type</label>
                     <select name="type" id="type" required
-                        class="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+                        class="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 shadow-sm focus:border-green-500 focus:ring-1 focus:ring-green-500">
                         <option value="income" {{ old('type') === 'income' ? 'selected' : '' }}>Income</option>
                         <option value="expense" {{ old('type') === 'expense' ? 'selected' : '' }}>Expense</option>
                     </select>
@@ -36,7 +36,7 @@
                 <div>
                     <label for="amount" class="block text-sm font-medium text-slate-700">Amount</label>
                     <input type="number" name="amount" id="amount" value="{{ old('amount') }}" required min="0.01" step="0.01"
-                        class="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 @error('amount') border-red-500 @enderror">
+                        class="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 shadow-sm focus:border-green-500 focus:ring-1 focus:ring-green-500 @error('amount') border-red-500 @enderror">
                     @error('amount')
                         <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                     @enderror
@@ -45,14 +45,14 @@
                 <div>
                     <label for="transaction_date" class="block text-sm font-medium text-slate-700">Date</label>
                     <input type="date" name="transaction_date" id="transaction_date" value="{{ old('transaction_date', date('Y-m-d')) }}" required
-                        class="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 @error('transaction_date') border-red-500 @enderror">
+                        class="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 shadow-sm focus:border-green-500 focus:ring-1 focus:ring-green-500 @error('transaction_date') border-red-500 @enderror">
                     @error('transaction_date')
                         <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                     @enderror
                 </div>
 
                 <div>
-                    <button type="submit" class="w-full rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 sm:w-auto">
+                    <button type="submit" class="w-full rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 sm:w-auto">
                         Add
                     </button>
                 </div>
@@ -60,7 +60,7 @@
                 <div class="sm:col-span-2 lg:col-span-4">
                     <label for="description" class="block text-sm font-medium text-slate-700">Description (optional)</label>
                     <input type="text" name="description" id="description" value="{{ old('description') }}" placeholder="e.g. Salary, Groceries"
-                        class="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 shadow-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+                        class="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 shadow-sm focus:border-green-500 focus:ring-1 focus:ring-green-500">
                 </div>
             </form>
         </div>

@@ -33,7 +33,7 @@ class WalletController extends Controller
             'description' => ['nullable', 'string', 'max:1000'],
         ]);
 
-        $validated['currency_code'] = strtoupper($validated['currency_code'] ?? 'USD');
+        $validated['currency_code'] = strtoupper($validated['currency_code'] ?? 'KES');
         $validated['initial_balance'] = $validated['initial_balance'] ?? 0;
         $validated['is_active'] = true;
 

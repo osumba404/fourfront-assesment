@@ -19,7 +19,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('name'); // e.g. "Business A", "Personal"
-            $table->string('currency_code', 3)->default('USD');
+            $table->string('currency_code', 3)->default('KES');
             $table->decimal('initial_balance', 15, 2)->default(0);
             $table->boolean('is_active')->default(true);
             $table->text('description')->nullable();
