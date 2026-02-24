@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Knowledge Club — Fourfront Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Mobile status bar (visible on small screens) -->
+    <div class="status-bar d-md-none">
+        <span class="status-time">9:41</span>
+        <div class="status-icons">
+            <i class="bi bi-wifi"></i>
+            <i class="bi bi-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- Navbar (collapsible menu) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">Investment Club</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#accounts">Accounts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#memberships">Memberships</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header: profile + welcome -->
+    <header class="header-section">
+        <div class="container py-4 py-md-5">
+            <div class="d-flex align-items-center gap-3 mb-3">
+                <img src="https://ui-avatars.com/api/?name=Michael&size=80&background=5a5a5a&color=fff" alt="Michael" class="header-avatar rounded-circle">
+                <h1 class="h4 mb-0 text-white">Michael</h1>
+            </div>
+            <p class="text-center text-white-50 mb-0">You've officially joined your first investment knowledge club!</p>
+        </div>
+    </header>
+
+    <!-- Account / Wallet summary cards -->
+    <section class="accounts-section" id="accounts">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-6">
+                    <div class="account-card account-card-dark h-100">
+                        <img src="https://ui-avatars.com/api/?name=Benard+Makodingo&size=56&background=4a4a4a&color=fff" alt="" class="account-avatar rounded-circle">
+                        <p class="account-name">Benard Makodingo</p>
+                        <p class="account-value">350</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="account-card account-card-green h-100">
+                        <div class="account-icon rounded-circle bg-white d-flex align-items-center justify-content-center">
+                            <i class="bi bi-person-walking text-success"></i>
+                        </div>
+                        <p class="account-name">kigSmall Foot</p>
+                        <p class="account-value">225</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="account-card account-card-yellow h-100">
+                        <img src="https://ui-avatars.com/api/?name=Caroline+Likhoi&size=56&background=e8c547&color=333" alt="" class="account-avatar rounded-circle">
+                        <p class="account-name">Caroline Likhoi</p>
+                        <p class="account-value">117</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="account-card account-card-purple h-100">
+                        <img src="https://ui-avatars.com/api/?name=Caroline+Likhoi&size=56&background=b8a0c4&color=333" alt="" class="account-avatar rounded-circle">
+                        <p class="account-name">Caroline Likhoi</p>
+                        <p class="account-value">321</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendation intro -->
+    <section class="recommend-section py-4">
+        <div class="container">
+            <h2 class="h5 mb-2">Now let's make you great!</h2>
+            <p class="text-muted mb-0">You have shown us where you are doing well and where we can support you to be great! From your profile we recommend these memberships. Pick one that fits you best and start your financial adventure.</p>
+        </div>
+    </section>
+
+    <!-- Membership toggles -->
+    <section class="memberships-section" id="memberships">
+        <div class="container">
+            <!-- Foundation Membership -->
+            <div class="membership-block mb-3">
+                <button class="membership-header w-100 text-start d-flex align-items-center justify-content-between py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#foundation-desc" aria-expanded="true" aria-controls="foundation-desc">
+                    <span>FOUNDATION MEMBERSHIP</span>
+                    <i class="bi bi-chevron-down toggle-icon"></i>
+                </button>
+                <div id="foundation-desc" class="membership-desc collapse show">
+                    <div class="p-4">
+                        We invest for you, in shares and in the Mansa-X global fund. Service is free online with your personal representative, but service in the office may have extra charges.
+                    </div>
+                </div>
+            </div>
+            <!-- Economy Membership -->
+            <div class="membership-block mb-3">
+                <button class="membership-header w-100 text-start d-flex align-items-center justify-content-between py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#economy-desc" aria-expanded="false" aria-controls="economy-desc">
+                    <span>ECONOMY MEMBERSHIP</span>
+                    <i class="bi bi-chevron-down toggle-icon"></i>
+                </button>
+                <div id="economy-desc" class="membership-desc collapse">
+                    <div class="p-4">
+                        We will invest your money for you at a guaranteed rate with the Mansa-X global fund. Service is free online with your personal representative, but service in the office may have extra charges.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA link -->
+    <section class="cta-section py-3">
+        <div class="container">
+            <a href="#" class="cta-link d-block text-center py-3 px-3" id="membershipDetailsLink">A closer look at the membership details is available here</a>
+        </div>
+    </section>
+
+    <!-- Bottom footer bar -->
+    <footer class="footer-bar">
+        <div class="container d-flex align-items-center justify-content-between py-2">
+            <span class="footer-text">Fourfront Management © 2025. All Rights Reserved</span>
+            <a href="https://wa.me/" class="footer-whatsapp rounded-circle d-flex align-items-center justify-content-center" aria-label="WhatsApp">
+                <i class="bi bi-whatsapp text-white"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm" novalidate>
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="contactName" required placeholder="Your name">
+                            <div class="invalid-feedback">Please enter your name.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="contactEmail" required placeholder="your@email.com">
+                            <div class="invalid-feedback">Please enter a valid email.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactMessage" class="form-label">Message</label>
+                            <textarea class="form-control" id="contactMessage" rows="3" required placeholder="Your message"></textarea>
+                            <div class="invalid-feedback">Please enter a message.</div>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Send message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+/* Investment Knowledge Club — Frontend Assessment */
+
+:root {
+    --header-bg: #3d3d3d;
+    --card-dark-bg: #4a4a4a;
+    --card-green-bg: #c8e6c9;
+    --card-yellow-bg: #fff9c4;
+    --card-purple-bg: #e1bee7;
+    --membership-header-bg: #5a5a5a;
+    --membership-desc-bg: #f5f5f5;
+    --cta-bg: #fff9c4;
+    --footer-bg: #2d2d2d;
+    --whatsapp-green: #25d366;
+}
+
+/* Status bar (mobile) */
+.status-bar {
+    background: #000;
+    color: #fff;
+    font-size: 0.875rem;
+    padding: 0.25rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-icons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Navbar */
+.navbar-dark.bg-dark-custom {
+    background-color: var(--header-bg) !important;
+}
+
+.navbar-brand,
+.navbar-dark .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.navbar-dark .nav-link:hover {
+    color: #fff !important;
+}
+
+/* Header section */
+.header-section {
+    background-color: var(--header-bg);
+    color: #fff;
+}
+
+.header-avatar {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .header-section .d-flex {
+        justify-content: center;
+    }
+    .header-section p {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Account cards */
+.accounts-section {
+    padding: 1.5rem 0;
+    margin-top: -0.5rem;
+}
+
+.account-card {
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+.account-card:hover {
+    transform: translateY(-2px);
+}
+
+.account-card-dark {
+    background-color: var(--card-dark-bg);
+    color: #fff;
+}
+
+.account-card-green {
+    background-color: var(--card-green-bg);
+    color: #1b5e20;
+}
+
+.account-card-yellow {
+    background-color: var(--card-yellow-bg);
+    color: #333;
+}
+
+.account-card-purple {
+    background-color: var(--card-purple-bg);
+    color: #333;
+}
+
+.account-avatar,
+.account-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 0.5rem;
+    object-fit: cover;
+}
+
+.account-icon {
+    font-size: 1.5rem;
+}
+
+.account-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+}
+
+.account-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+/* Recommendation section */
+.recommend-section {
+    background: #fff;
+}
+
+.recommend-section h2 {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Membership blocks */
+.membership-header {
+    background-color: var(--membership-header-bg);
+    color: #fff;
+    border: none;
+    border-radius: 8px 8px 0 0;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+}
+
+.membership-header:hover {
+    background-color: #4a4a4a;
+    color: #fff;
+}
+
+.membership-header[aria-expanded="true"] .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.toggle-icon {
+    transition: transform 0.25s ease;
+    font-size: 1.25rem;
+}
+
+.membership-desc {
+    background-color: var(--membership-desc-bg);
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    color: #444;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.membership-block .membership-header {
+    border-radius: 8px;
+}
+
+.membership-block .membership-desc.collapse:not(.show) {
+    border: none;
+}
+
+.membership-block .membership-desc.show {
+    border-radius: 0 0 8px 8px;
+}
+
+/* CTA link */
+.cta-section {
+    background: #fff;
+}
+
+.cta-link {
+    background-color: var(--cta-bg);
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.cta-link:hover {
+    background-color: #fff59d;
+    color: #333;
+}
+
+/* Footer bar */
+.footer-bar {
+    background-color: var(--footer-bg);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.8rem;
+}
+
+.footer-text {
+    max-width: 60%;
+}
+
+.footer-whatsapp {
+    width: 44px;
+    height: 44px;
+    background-color: var(--whatsapp-green);
+    color: #fff;
+    flex-shrink: 0;
+    transition: opacity 0.2s;
+}
+
+.footer-whatsapp:hover {
+    opacity: 0.9;
+    color: #fff;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success {
+    background-color: #2e7d32;
+    border-color: #2e7d32;
+}
+
+.btn-success:hover {
+    background-color: #1b5e20;
+    border-color: #1b5e20;
+}
+
+/* Responsive tweaks */
+@media (min-width: 576px) {
+    .account-name {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .accounts-section .row {
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .memberships-section .container {
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 992px) {
+    .status-bar {
+        display: none;
+    }
+}
