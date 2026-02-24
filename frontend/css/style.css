@@ -43,10 +43,17 @@
     color: #fff !important;
 }
 
-/* Header section */
+/* Header section — yellow rectangle ring, welcome text larger & bold to the right */
 .header-section {
     background-color: var(--header-bg);
     color: #fff;
+    padding: 1rem 0;
+}
+
+.header-card {
+    border: 3px solid #f5d547;
+    border-radius: 12px;
+    background-color: var(--header-bg);
 }
 
 .header-avatar {
@@ -55,14 +62,16 @@
     object-fit: cover;
 }
 
+.header-welcome {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: right;
+}
+
 @media (min-width: 768px) {
-    .header-section .d-flex {
-        justify-content: center;
-    }
-    .header-section p {
-        max-width: 480px;
-        margin-left: auto;
-        margin-right: auto;
+    .header-welcome {
+        font-size: 1.25rem;
     }
 }
 
@@ -72,19 +81,43 @@
     margin-top: -0.5rem;
 }
 
+/* Account cards — row 1: image + name; row 2: number below */
 .account-card {
     border-radius: 12px;
-    padding: 1rem;
+    padding: 0.75rem 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    gap: 0.5rem;
+    text-align: left;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s;
 }
 
 .account-card:hover {
     transform: translateY(-2px);
+}
+
+.account-card-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.account-image {
+    flex-shrink: 0;
+    position: relative;
+}
+
+.account-avatar,
+.account-icon {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+}
+
+.account-icon {
+    font-size: 1.5rem;
 }
 
 .account-card-dark {
@@ -107,45 +140,83 @@
     color: #333;
 }
 
-.account-avatar,
-.account-icon {
-    width: 56px;
-    height: 56px;
-    margin-bottom: 0.5rem;
-    object-fit: cover;
-}
-
-.account-icon {
-    font-size: 1.5rem;
-}
-
 .account-name {
     font-size: 0.75rem;
     font-weight: 600;
-    margin-bottom: 0.25rem;
     line-height: 1.2;
+    flex: 1;
+    min-width: 0;
 }
 
 .account-value {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 0;
+    margin-top: 0.15rem;
+    text-align: center;
 }
 
-/* Recommendation section */
+/* Recommendation section — grey card, same width as account cards */
 .recommend-section {
     background: #fff;
 }
 
-.recommend-section h2 {
-    color: #333;
-    font-weight: 600;
+.recommend-card {
+    background-color: #5a5a5a;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    max-width: 100%;
 }
 
-/* Membership blocks */
+@media (min-width: 768px) {
+    .recommend-card {
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Title: big, bold, yellow */
+.recommend-card .recommend-title {
+    color: #f5d547 !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+    .recommend-card .recommend-title {
+        font-size: 1.75rem !important;
+    }
+}
+
+.recommend-card .recommend-text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Second line: yellow */
+.recommend-card .recommend-text-yellow {
+    color: #f5d547 !important;
+    margin-bottom: 0.75rem;
+}
+
+/* Third line: white */
+.recommend-card .recommend-text-white {
+    color: #ffffff !important;
+}
+
+@media (min-width: 768px) {
+    .recommend-card .recommend-text {
+        font-size: 1.05rem;
+    }
+}
+
+/* Membership blocks — FOUNDATION yellow, ECONOMY grey; FOUNDATION/ECONOMY bold */
 .membership-header {
-    background-color: var(--membership-header-bg);
-    color: #fff;
+    background-color: #f5d547;
+    color: #1a1a1a;
     border: none;
     border-radius: 8px 8px 0 0;
     font-weight: 600;
@@ -154,9 +225,23 @@
     cursor: pointer;
 }
 
-.membership-header:hover {
+.membership-header-grey {
+    background-color: #5a5a5a;
+    color: #fff;
+}
+
+.membership-header.membership-header-grey:hover {
     background-color: #4a4a4a;
     color: #fff;
+}
+
+.membership-header strong {
+    font-weight: 700;
+}
+
+.membership-header:hover {
+    background-color: #e6c63e;
+    color: #1a1a1a;
 }
 
 .membership-header[aria-expanded="true"] .toggle-icon {
@@ -264,8 +349,12 @@
         margin-left: auto;
         margin-right: auto;
     }
-    .memberships-section .container {
-        max-width: 600px;
+    /* Same width as recommendation card (520px) */
+    .memberships-section .container,
+    .cta-section .container {
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

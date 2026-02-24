@@ -35,48 +35,54 @@
         </div>
     </nav>
 
-    <!-- Header: profile + welcome -->
+    <!-- Header: profile + welcome (yellow ring, text right & bold) -->
     <header class="header-section">
-        <div class="container py-4 py-md-5">
+        <div class="header-card container py-4 py-md-5">
             <div class="d-flex align-items-center gap-3 mb-3">
-                <img src="https://ui-avatars.com/api/?name=Michael&size=80&background=5a5a5a&color=fff" alt="Michael" class="header-avatar rounded-circle">
+                <img src="img/MoS_PresidentBarackObama.webp" alt="Michael" class="header-avatar rounded-circle" onerror="this.src='https://ui-avatars.com/api/?name=Michael&size=80&background=5a5a5a&color=fff'">
                 <h1 class="h4 mb-0 text-white">Michael</h1>
             </div>
-            <p class="text-center text-white-50 mb-0">You've officially joined your first investment knowledge club!</p>
+            <p class="header-welcome mb-0">You've officially joined your first investment knowledge club!</p>
         </div>
     </header>
 
-    <!-- Account / Wallet summary cards -->
+    <!-- Account / Wallet summary cards (image left, text right) -->
     <section class="accounts-section" id="accounts">
         <div class="container">
             <div class="row g-3">
                 <div class="col-6">
                     <div class="account-card account-card-dark h-100">
-                        <img src="https://ui-avatars.com/api/?name=Benard+Makodingo&size=56&background=4a4a4a&color=fff" alt="" class="account-avatar rounded-circle">
-                        <p class="account-name">Benard Makodingo</p>
+                        <div class="account-card-top">
+                            <img src="img/MoS_PresidentBarackObama.webp" alt="" class="account-avatar rounded-circle" onerror="this.src='https://ui-avatars.com/api/?name=Benard+Makodingo&size=56&background=4a4a4a&color=fff'">
+                            <p class="account-name mb-0">Benard Makodingo</p>
+                        </div>
                         <p class="account-value">350</p>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="account-card account-card-green h-100">
-                        <div class="account-icon rounded-circle bg-white d-flex align-items-center justify-content-center">
-                            <i class="bi bi-person-walking text-success"></i>
+                        <div class="account-card-top">
+                            <img src="img/lupiter.webp" alt="" class="account-avatar rounded-circle" onerror="this.src='https://ui-avatars.com/api/?name=Benard+Makodingo&size=56&background=4a4a4a&color=fff'">
+\                            <p class="account-name mb-0">kigSmall Foot</p>
                         </div>
-                        <p class="account-name">kigSmall Foot</p>
                         <p class="account-value">225</p>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="account-card account-card-yellow h-100">
-                        <img src="https://ui-avatars.com/api/?name=Caroline+Likhoi&size=56&background=e8c547&color=333" alt="" class="account-avatar rounded-circle">
-                        <p class="account-name">Caroline Likhoi</p>
+                        <div class="account-card-top">
+                            <img src="img/lupiter.webp" alt="" class="account-avatar rounded-circle" onerror="this.src='https://ui-avatars.com/api/?name=Caroline+Likhoi&size=56&background=e8c547&color=333'">
+                            <p class="account-name mb-0">Caroline Likhoi</p>
+                        </div>
                         <p class="account-value">117</p>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="account-card account-card-purple h-100">
-                        <img src="https://ui-avatars.com/api/?name=Caroline+Likhoi&size=56&background=b8a0c4&color=333" alt="" class="account-avatar rounded-circle">
-                        <p class="account-name">Caroline Likhoi</p>
+                        <div class="account-card-top">
+                            <img src="img/MoS_PresidentBarackObama.webp" alt="" class="account-avatar rounded-circle" onerror="this.src='https://ui-avatars.com/api/?name=Caroline+Likhoi&size=56&background=b8a0c4&color=333'">
+                            <p class="account-name mb-0">Caroline Likhoi</p>
+                        </div>
                         <p class="account-value">321</p>
                     </div>
                 </div>
@@ -84,11 +90,14 @@
         </div>
     </section>
 
-    <!-- Recommendation intro -->
+    <!-- Recommendation intro (grey card, same width as account cards) -->
     <section class="recommend-section py-4">
         <div class="container">
-            <h2 class="h5 mb-2">Now let's make you great!</h2>
-            <p class="text-muted mb-0">You have shown us where you are doing well and where we can support you to be great! From your profile we recommend these memberships. Pick one that fits you best and start your financial adventure.</p>
+            <div class="recommend-card">
+                <h2 class="recommend-title">Now let's make you great!</h2>
+                <p class="recommend-text recommend-text-yellow">You have shown us where you are doing well and where we can support you to be great!</p>
+                <p class="recommend-text recommend-text-white mb-0">From your profile we recommend these memberships. Pick one that fits you best and start your financial adventure.</p>
+            </div>
         </div>
     </section>
 
@@ -98,7 +107,7 @@
             <!-- Foundation Membership -->
             <div class="membership-block mb-3">
                 <button class="membership-header w-100 text-start d-flex align-items-center justify-content-between py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#foundation-desc" aria-expanded="true" aria-controls="foundation-desc">
-                    <span>FOUNDATION MEMBERSHIP</span>
+                    <span><strong>FOUNDATION</strong> MEMBERSHIP</span>
                     <i class="bi bi-chevron-down toggle-icon"></i>
                 </button>
                 <div id="foundation-desc" class="membership-desc collapse show">
@@ -107,10 +116,10 @@
                     </div>
                 </div>
             </div>
-            <!-- Economy Membership -->
+            <!-- Economy Membership (grey background) -->
             <div class="membership-block mb-3">
-                <button class="membership-header w-100 text-start d-flex align-items-center justify-content-between py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#economy-desc" aria-expanded="false" aria-controls="economy-desc">
-                    <span>ECONOMY MEMBERSHIP</span>
+                <button class="membership-header membership-header-grey w-100 text-start d-flex align-items-center justify-content-between py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#economy-desc" aria-expanded="false" aria-controls="economy-desc">
+                    <span><strong>ECONOMY</strong> MEMBERSHIP</span>
                     <i class="bi bi-chevron-down toggle-icon"></i>
                 </button>
                 <div id="economy-desc" class="membership-desc collapse">
